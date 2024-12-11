@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+.myCard {
+  background-color: rgb(184, 184, 184);
+  font-size: 1.5rem;
+  padding: 0.5em;
+}

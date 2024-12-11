@@ -1,11 +1,15 @@
-function divs(){
-    
-    for(i = 0; i <= 16; i++){
-    
-        let div = document.createElement('div')
+const divContainer = document.querySelector(".container");
 
-        div.classList.add("card")
+function divs() {
+  for (i = 0; i <= 256; i++) {
+    let card = document.createElement("div");
 
-        div.innerHTML = `Hello World`
-    }  
+    card.classList.add("myCard");
+
+    card.setAttribute("data-index", i);
+
+    divContainer.appendChild(card);
+  }
 }
+
+divs();
