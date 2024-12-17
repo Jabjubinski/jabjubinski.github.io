@@ -18,17 +18,27 @@
     ></script>
   </head>
   <body>
-    <div class="grid-maker">
-      <input id="grid-number" type="text" />
-      <button id="btn-create" class="btn btn-success">Create</button>
+    <div class="whole-container">
+      <div class="grid-maker">
+        <input type="color" id="color">
+        <input type="color" id="background-color">
+        <label for="grid-number">Enter Grid Number :</label>
+        <div class="grid-size-value">
+            
+        </div>
+        <input id="grid-number" value="16" type="range" min="1" max="64" name="grid-size">
+        <button id="btn-create" class="btn">Create</button>
+        <button id="clear" class="btn btn-danger">Clear</button>
+        <button id="rainbow">Rainbow</button>
+        <button id="monochrome">MonoChrome</button>
+        <button id="eraser">Eraser</button>
+      </div>
+
+      <div class="container"></div>
     </div>
-
-    <button id="clear" class="btn btn-danger">Clear</button>
-
-    <div class="container">
+    
         
-    </div>
-
+    
     <script src="./main.js"></script>
   </body>
 </html>

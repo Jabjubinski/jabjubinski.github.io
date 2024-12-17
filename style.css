@@ -7,14 +7,48 @@
   display: flex;
   flex-wrap: wrap;
 }
-.myCard {
+.pixel {
   background-color: rgb(180, 180, 180);
   font-size: 1.5rem;
   padding: 0.5em;
   border: none;
-  transition: .5s;
+  transition: 0.2s;
+  flex: 1 1 25px
 }
-.myCard:hover{
-    background-color: black;
+.grid-maker {
+  width: 50%;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
 }
-
+#btn-create {
+  border-radius: 25px;
+  border: none;
+  background: green;
+  color: white;
+  width: 5em;
+}
+#clear {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  width: 5em;
+}
+.whole-container {
+  display: flex;
+}
+.slider {
+  width: 250px;
+  height: 10px;
+  border-radius: 25px;
+  position: relative;
+  margin: 25px;
+}
+#color {
+  border-radius: 50px;
+  border: none;
+  width: 80px;
+  height: 80px;
+  outline: none;
+  appearance: none;
+}
