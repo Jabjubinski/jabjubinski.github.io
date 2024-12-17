@@ -56,6 +56,9 @@ btnCreate.addEventListener("click", () => {
         pixel.style.backgroundColor = "rgb(180, 180, 180)";
       });
     });
+    backgroundColor.addEventListener('input', ()=>{
+      pixel.style.backgroundColor = `${backgroundColor.value}`
+    });
   }
 });
 
