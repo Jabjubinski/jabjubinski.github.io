@@ -8,6 +8,7 @@ const monoChrome = document.getElementById("monochrome");
 const color = document.getElementById("color");
 const eraser = document.getElementById("eraser");
 const backgroundColor = document.getElementById("background-color");
+const save = document.getElementById("save-image");
 //grid rows and columns inputs
 const gridNumber = document.getElementById("grid-number");
 
@@ -78,6 +79,9 @@ function gridMaker() {
       divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto";
     });
   });
+  save.addEventListener("click", () => {
+    
+  });
 }
 
 gridNumber.addEventListener("input", () => {
@@ -87,3 +91,4 @@ gridNumber.addEventListener("input", () => {
 window.onload = () => {
   gridMaker();
 };
+
