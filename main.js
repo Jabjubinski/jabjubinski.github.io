@@ -26,8 +26,14 @@ function gridMaker() {
   }
   const allPixel = document.querySelectorAll(".pixel");
 
+  allPixel.forEach((pixel) => {
+    pixel.addEventListener('click', () => {
+      divContainer.style.cursor = "url('pencil-solid.svg')7 500, auto";
+      pixel.style.backgroundColor = `${color.value}`;
+    })
+  });
+
   rainbow.addEventListener("click", () => {
-    divContainer.style.cursor = "url('pencil-solid.svg')7 500, auto";
     allPixel.forEach((pixel) => {
       pixel.addEventListener("click", () => {
         const r = Math.floor(Math.random() * 257);
@@ -65,6 +71,14 @@ function gridMaker() {
       pixel.style.backgroundColor = `${backgroundColor.value}`;
     });
   });
+  allPixel.forEach((pixel) => {
+    pixel.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      pixel.style.backgroundColor = `${backgroundColor.value}`
+      divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto"
+    })
+
+  });
 }
 
 gridNumber.addEventListener("input", () => {
@@ -74,3 +88,5 @@ gridNumber.addEventListener("input", () => {
 window.onload = () => {
   gridMaker();
 };
+
+
