@@ -25,17 +25,7 @@ function gridMaker() {
     pixel.setAttribute("data-index", i);
     divContainer.appendChild(pixel);
   }
-}
-
-gridNumber.addEventListener("input", () => {
-  gridMaker();
-});
-
-window.onload = () => {
-  gridMaker();
-};
-
-const allPixel = document.querySelectorAll(".pixel");
+  const allPixel = document.querySelectorAll(".pixel");
 
 rainbow.addEventListener("click", () => {
   allPixel.forEach((pixel) => {
@@ -73,3 +63,14 @@ clear.addEventListener("click", () => {
     pixel.style.backgroundColor = `${backgroundColor.value}`;
   });
 });
+
+}
+
+gridNumber.addEventListener("input", () => {
+  gridMaker();
+});
+
+window.onload = () => {
+  gridMaker();
+};
+
