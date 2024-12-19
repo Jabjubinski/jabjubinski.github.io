@@ -27,10 +27,10 @@ function gridMaker() {
   const allPixel = document.querySelectorAll(".pixel");
 
   allPixel.forEach((pixel) => {
-    pixel.addEventListener('click', () => {
+    pixel.addEventListener("click", () => {
       divContainer.style.cursor = "url('pencil-solid.svg')7 500, auto";
       pixel.style.backgroundColor = `${color.value}`;
-    })
+    });
   });
 
   rainbow.addEventListener("click", () => {
@@ -45,7 +45,7 @@ function gridMaker() {
     });
   });
   monoChrome.addEventListener("click", () => {
-    divContainer.style.cursor = "url('pencil-solid.svg')7 500, auto";
+    divContainer.style.cursor = "url('pencil-solid.svg')76 2054, auto";
     allPixel.forEach((pixel) => {
       pixel.addEventListener("click", () => {
         pixel.style.backgroundColor = `${color.value}`;
@@ -53,7 +53,7 @@ function gridMaker() {
     });
   });
   eraser.addEventListener("click", () => {
-    divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto";
+    divContainer.style.cursor = "url('eraser-solid.svg')1570 602, auto";
     allPixel.forEach((pixel) => {
       pixel.addEventListener("click", () => {
         pixel.style.backgroundColor = `${backgroundColor.value}`;
@@ -72,12 +72,11 @@ function gridMaker() {
     });
   });
   allPixel.forEach((pixel) => {
-    pixel.addEventListener('contextmenu', (e) => {
+    pixel.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      pixel.style.backgroundColor = `${backgroundColor.value}`
-      divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto"
-    })
-
+      pixel.style.backgroundColor = `${backgroundColor.value}`;
+      divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto";
+    });
   });
 }
 
@@ -88,5 +87,3 @@ gridNumber.addEventListener("input", () => {
 window.onload = () => {
   gridMaker();
 };
-
-
