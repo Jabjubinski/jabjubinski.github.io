@@ -12,8 +12,7 @@ const backgroundColor = document.getElementById("background-color");
 //grid rows and columns inputs
 const gridNumber = document.getElementById("grid-number");
 
-//grid pixel number changer event listener
-gridNumber.addEventListener("input", () => {
+function gridMaker() {
   gridSizeValue.innerHTML = `${gridNumber.value} x ${gridNumber.value}`;
   divContainer.innerHTML = "";
 
@@ -26,8 +25,16 @@ gridNumber.addEventListener("input", () => {
     pixel.setAttribute("data-index", i);
     divContainer.appendChild(pixel);
   }
+}
+
+gridNumber.addEventListener("input", () => {
+  gridMaker();
 });
-//grid making function
+
+window.onload = () => {
+  gridMaker();
+};
+
 const allPixel = document.querySelectorAll(".pixel");
 
 rainbow.addEventListener("click", () => {
@@ -66,15 +73,3 @@ clear.addEventListener("click", () => {
     pixel.style.backgroundColor = `${backgroundColor.value}`;
   });
 });
-
-window.onload = () => {
-  for (let i = 0; i < 16 * 16; i++) {
-    const pixel = document.createElement("div");
-
-    pixel.classList.add("pixel");
-    pixel.style.width = `calc(100%/${gridNumber.value})`;
-    pixel.style.backgroundColor = `${backgroundColor.value}`;
-    pixel.setAttribute("data-index", i);
-    divContainer.appendChild(pixel);
-  }
-};
