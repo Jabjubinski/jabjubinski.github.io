@@ -20,13 +20,25 @@
   <body>
     <div class="whole-container">
       <div class="grid-maker">
-        <input type="color" id="color">
-        <input type="color" id="background-color">
-        <label for="grid-number">Enter Grid Number :</label>
-        <div class="grid-size-value">
-            
-        </div>
-        <input id="grid-number" value="16" type="range" min="1" max="64" name="grid-size">
+        <label for="color">Paint Color:</label>
+        <input type="color" class="color" value="#FFFFFF" id="color" />
+        <label for="background-color">background color:</label>
+        <input
+          type="color"
+          class="color"
+          value="#FFFFFF"
+          id="background-color"
+        />
+        <label for="grid-number">Enter Grid Number &nbsp; :</label>
+        <div class="grid-size-value"></div>
+        <input
+          id="grid-number"
+          value="16"
+          type="range"
+          min="1"
+          max="64"
+          name="grid-size"
+        />
         <button id="btn-create" class="btn">Create</button>
         <button id="clear" class="btn btn-danger">Clear</button>
         <button id="rainbow">Rainbow</button>
@@ -36,9 +48,7 @@
 
       <div class="container"></div>
     </div>
-    
-        
-    
+
     <script src="./main.js"></script>
   </body>
 </html>

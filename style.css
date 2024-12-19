@@ -1,30 +1,33 @@
+:root {
+  --mint: rgb(47, 162, 132);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: gray !important;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 .pixel {
-  background-color: rgb(180, 180, 180);
-  font-size: 1.5rem;
-  padding: 0.5em;
-  border: none;
-  transition: 0.2s;
-  flex: 1 1 25px
+  border: 1px solid hsla(360 100% 0% / 0.50);
 }
 .grid-maker {
-  width: 50%;
   display: flex;
   gap: 0.5em;
   flex-direction: column;
 }
+#grid-number {
+  accent-color: var(--mint);
+}
 #btn-create {
   border-radius: 25px;
   border: none;
-  background: green;
+  background: var(--mint);
   color: white;
   width: 5em;
 }
@@ -44,7 +47,7 @@
   position: relative;
   margin: 25px;
 }
-#color {
+.color {
   border-radius: 50px;
   border: none;
   width: 80px;
