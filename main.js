@@ -50,10 +50,10 @@ function gridMaker() {
   monoChrome.addEventListener("click", () => {
     divContainer.style.cursor = "url('pencil-solid.svg')76 2054, auto";
     allPixel.forEach((pixel) => {
-      pixel.addEventListener("click", () => {
-        pixel.style.backgroundColor = `${color.value}`;
-        pixel.setAttribute("data-filled", true);
-      });
+      // pixel.addEventListener("click", () => {
+      //   pixel.style.backgroundColor = `${color.value}`;
+      //   pixel.setAttribute("data-filled", true);
+      // });
     });
   });
   eraser.addEventListener("click", () => {
@@ -83,6 +83,22 @@ function gridMaker() {
       e.preventDefault();
       pixel.style.backgroundColor = `${backgroundColor.value}`;
       divContainer.style.cursor = "url('eraser-solid.svg')7 500, auto";
+    });
+  });
+
+  let mouseDown = false;
+
+  allPixel.forEach((pixel) => {
+    pixel.addEventListener("mousemove", () => {
+      pixel.addEventListener("mousedown", () => {
+        mouseDown = true;
+      });
+      pixel.addEventListener("mouseup", () => {
+        mouseDown = false;
+      });
+      if (mouseDown === true) {
+        pixel.style.backgroundColor = `${color.value}`;
+      }
     });
   });
 }
