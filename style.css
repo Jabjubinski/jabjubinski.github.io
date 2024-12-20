@@ -1,15 +1,14 @@
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --mint: rgb(47, 162, 132);
   --mint-bg: rgb(44, 143, 116);
   --border: rgba(139, 139, 139, 0.527);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .btn-general {
   border-radius: 25px;
   border: none;
@@ -98,14 +97,14 @@ body {
   appearance: none;
   transform: scale(0.5);
 }
-footer{
+footer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  padding: .5em;
-  margin: .5em;
-  gap: .5em;
+  padding: 0.5em;
+  margin: 0.5em;
+  gap: 0.5em;
   font-size: 1.5rem;
 }
