@@ -90,11 +90,15 @@ function gridMaker() {
 
   allPixel.forEach((pixel) => {
     pixel.addEventListener("mousemove", () => {
-      pixel.addEventListener("mousedown", () => {
-        mouseDown = true;
+      pixel.addEventListener("mousedown", (e) => {
+        if (e.button === 0) {
+          mouseDown = true;
+        }
       });
-      pixel.addEventListener("mouseup", () => {
-        mouseDown = false;
+      pixel.addEventListener("mouseup", (e) => {
+        if (e.button === 0) {
+          mouseDown = false;
+        }
       });
       if (mouseDown === true) {
         pixel.style.backgroundColor = `${color.value}`;
